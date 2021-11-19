@@ -1,7 +1,9 @@
 N = int(input())
 h = [int(i) for i in input().split()]
+INF = float('inf')
 
-dp = [0] * N
+# dp = [0] * N 最小化問題は最大値が初期値
+dp = [INF] * N
 dp[1] = abs(h[0] - h[1])
 
 for i in range(2, N):
